@@ -1,10 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: zhaohuihe
- * Date: 5/12/2017
- * Time: 9:37 PM
- */
  <!DOCTYPE html>
  <html>
  <head>
@@ -13,7 +6,13 @@
  <body>
     <header class="nav navbar-fixed-top navbar-right">
         <div class="container">
+            <div>
+              <a href="/" id="logo">Sample App</a>
+            </div>
         </div>
     </header>
+    <main class="container">
+        @yield('content')
+    </main>
  </body>
  </html>

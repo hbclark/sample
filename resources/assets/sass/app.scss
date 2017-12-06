@@ -1,9 +1,23 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$navbar-color:#3e424c;
+
+/* universal   */
+
+h1{
+  font-size: 3em;
+  color:#fff;
+}
+
+.jumbotron{
+  text-align: center;
+}
+
+
+#logo{
+  color:#777;
+}
