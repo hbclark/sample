@@ -50,7 +50,7 @@ p{
 
 
 #logo{
-  floa:left;
+  float:left;
   margin-left: 10px;
   font-size: 1.7em;
   color:#fff;
@@ -60,5 +60,43 @@ p{
   font-weight: bold;
   &:hover{
     color: #fff;
+  }
+}
+
+/*  footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+
+  }
+  img.brnad-icon {
+    width: 17px;
+    height: 17px;
+  }
+  .slogon{
+    font-size: 13px;
+    font-weight: bold;
   }
 }
