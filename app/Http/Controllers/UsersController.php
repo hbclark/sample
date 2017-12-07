@@ -17,7 +17,13 @@ class UsersController extends Controller
     }
 
     public function store(UserStoreRequest $request){
-        $user = User::create($request->all());
+
+        $user=User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password),
+            ]
+        );
         session()->flash('success','welcome');
         return view('users.show',compact('user'));
 
