@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 
 class SessionsController extends Controller
