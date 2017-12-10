@@ -4,15 +4,15 @@
             <a href="{{route('home')}}" id="logo">Sample App</a>
             <nav>
                 <ul class="nav navbar-nav navbar-right">
-                    @if(\Illuminate\Support\Facades\Auth::check())
-                        <li><a href="#">Users List</a></li>
+                    @if(Auth::check())
+                        <li><a href="{{route('users.index')}}">Users List</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 {{\Illuminate\Support\Facades\Auth::user()->name}}<b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('users.show',Auth::user()->id)}}">User Center</a></li>
-                                <li><a href="#">Edit profile</a></li>
+                                <li><a href="{{route('users.show',Auth::user())}}">User Center</a></li>
+                                <li><a href="{{route('users.edit',Auth::user())}}">Edit profile</a></li>
                                 <li class="divider"></li>
                                 <li>
                                     <a id="logout" href="#">
