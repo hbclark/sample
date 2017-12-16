@@ -7,12 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests\UserStoreRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class UsersController extends Controller
 {
     public function __construct(){
         $this->middleware('auth',[
-            'except'=>['show','create','store','index']]);
+            'except'=>['show','create','store','index','confirmEmail']]);
         $this->middleware('guest',[
             'only'=>['create']
         ]);
@@ -41,11 +42,40 @@ class UsersController extends Controller
             'password'=>bcrypt($request->password),
             ]
         );
-        Auth::login($user);  //Login automatically after registered successfully
-        session()->flash('success','welcome');
-        return view('users.show',compact('user'));
+
+        $this->sendEmailConfirmationTo($user);
+        session()->flash('success','the confirmation email has been sent to your email box');
+        return redirect('/');
 
     }
+
+    public function confirmEmail($token){
+        $user=User::where('activation_token',$token)->firstOrFail();
+        $user->activated=true;
+        $user->activation_token=null;
+        $user->save();
+
+        Auth::login($user);
+        session()->flash('success','Congratulation,activation finished');
+        return redirect()->route('users.show',[$user]);
+
+    }
+
+    protected function sendEmailConfirmationTo($user){
+        $view='emails.confirm';
+        $data=compact('user');
+        $from='arcaneade@gmail.com';
+        $name='clarkhe';
+        $to=$user->email;
+        $subject='Thanks for registering Sample Website';
+
+        Mail::send($view,$data,function ($message) use($from,$name,$to,$subject){
+            $message->from($from,$name)->to($to)->subject($subject);
+        });
+    }
+
+
+
     public function edit(User $user){
         $this->authorize('update',$user);
         return view('users.edit',compact('user'));
