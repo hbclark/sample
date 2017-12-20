@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', '更新密码')
+@section('title', 'Change Password')
 
 @section('content')
     <div class="container">

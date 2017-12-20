@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    发送密码重置邮件
+                                    Send password reset email
                                 </button>
                             </div>
                         </div>
