@@ -6,7 +6,7 @@ function get_db_config()
 
 		return $db_config = [
 			'connection' => 'pgsql',
-			'host' => 'ec2-50-16-217-122.compute-1.amazonaws.com:5432',
+			'host' => 'ec2-50-16-217-122.compute-1.amazonaws.com',
             'database'  => 'd8jh74sk66i8dq',
             'port'=>'5432',
 			'username'  => 'dfiyakmpmfefth',
