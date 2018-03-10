@@ -6,10 +6,11 @@ function get_db_config()
 
 		return $db_config = [
 			'connection' => 'pgsql',
-			'host' => $url["host"],
-			'database'  => substr($url["path"], 1),
-			'username'  => $url["user"],
-			'password'  => $url["pass"],
+			'host' => 'ec2-50-16-217-122.compute-1.amazonaws.com',
+            'database'  => 'd8jh74sk66i8dq',
+            'port'=>'5432',
+			'username'  => 'dfiyakmpmfefth',
+			'password'  => '0d66a80d50ded0df5d41d57183347a544f9996a44e8d5e5d889dfc57c9040019',
 		];
 	} else {
 		return $db_config = [
