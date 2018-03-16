@@ -1025,16 +1025,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.24.1",
+            "version": "1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41"
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bba6c6e410c6b4317e37a9474aeaa753808c3875",
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875",
                 "shasum": ""
             },
             "require": {
@@ -1074,7 +1074,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-03-09T15:49:34+00:00"
+            "time": "2018-03-10T10:10:14+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2552,12 +2552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tymondesigns/jwt-auth.git",
-                "reference": "592e5e10c4e2d40bbf6db7d0e64367847118606a"
+                "reference": "2b79229235d83523a05069ccb9c97cd5ec0b8123"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/592e5e10c4e2d40bbf6db7d0e64367847118606a",
-                "reference": "592e5e10c4e2d40bbf6db7d0e64367847118606a",
+                "url": "https://api.github.com/repos/tymondesigns/jwt-auth/zipball/2b79229235d83523a05069ccb9c97cd5ec0b8123",
+                "reference": "2b79229235d83523a05069ccb9c97cd5ec0b8123",
                 "shasum": ""
             },
             "require": {
@@ -2619,7 +2619,7 @@
                 "jwt",
                 "laravel"
             ],
-            "time": "2018-03-05T22:18:39+00:00"
+            "time": "2018-03-10T22:14:03+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
