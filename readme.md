@@ -1,6 +1,6 @@
 This is a laravel website.
 
-1.git clone https://github.com/hbclark/sample.git
+1.git clone https://github.com/hbclark/sample.git </br>
 2. admin account:arcaneade@gmail.com password:password
 
 ## License
